@@ -171,7 +171,7 @@ for(i=1; i <= 1 + Radiostations.length; i++){
 if(Number(i) === 35) {
   channel.leave();
   return message.reply(  new MessageEmbed()
-.setColor("#ff0e7a")
+.setColor("#6F3917")
 .setTitle( `Not a valid radio station please use a Number between \`1\` and \`${Radiostations.length}\``));}
 //define the Radio Args like title and url
 const args2 = Radiostations[i-1].split(` `);
@@ -206,11 +206,11 @@ const queueConstruct = {
 queueConstruct.connection = await channel.join().catch(console.error);
 //Send info message for joining 
 if(!serverQueue)
-message.channel.send(    new MessageEmbed().setColor("#c219d8")
+message.channel.send(    new MessageEmbed().setColor("#6F3917")
 .setDescription(`**👍 Joined \`${channel.name}\` 📄 bouned \`#${message.channel.name}\`**`)
 .setFooter(`${message.author.username}#${message.author.discriminator}`));
 //send Search something embed
-message.channel.send(new MessageEmbed().setColor("#c219d8")
+message.channel.send(new MessageEmbed().setColor("#6F3917")
 .setDescription(`**💢 Searching 🔍 \`${Radiostations[i-1].split(" ")[0]}\`**`));
 //mute yourself
 await queueConstruct.connection.voice.setSelfDeaf(true);
@@ -243,7 +243,7 @@ if (serverQueue) {
   //the new song embed
   const newsong = new MessageEmbed()
     .setTitle("✅ " + song.title)
-    .setColor("#c219d8")
+    .setColor("#6F3917")
     .setThumbnail(song.thumbnail)
     .setURL(song.url)
     .setDescription(`\`\`\`Has been added to the Queue.\`\`\``)
